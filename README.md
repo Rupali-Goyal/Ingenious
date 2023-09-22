@@ -7,22 +7,22 @@
 - Create a virtual environment for your project. Open the terminal or command prompt and navigate to your project directory.
 - Run the following command to create a virtual environment (OPTIONAL):
 
-` `python -m venv env
+   ` python -m venv env `
 
 - Activate the virtual environment:
   - For Windows:
 
-.\env\Scripts\activate
+    ` .\env\Scripts\activate `
 
-- For macOS/Linux:
+  - For macOS/Linux:
 
-`    `source env/bin/activate
+    ` source env/bin/activate  `
 
 **Step 2: Install Dependencies**
 
 - With the virtual environment activated, install Django and other project dependencies. You can do this by running the following command:
 
-`  `pip install django
+    ` pip install django `
 
 **Step 3: Database Setup**
 
@@ -34,13 +34,13 @@
 
 - Apply the database migrations to create the necessary tables in the database. In the terminal or command prompt, run the following command:
 
-`  `python manage.py migrate
+  ` python manage.py migrate `
 
 **Step 5: Create a Superuser (Optional)**
 
 - To access the Django admin interface and manage the project's data, you can create a superuser account by running the following command:
 
-`  `python manage.py createsuperuser
+  ` python manage.py createsuperuser `
 
 - Follow the prompts to provide a username, email (optional), and password for the superuser.
   - This superuser account can then be used to log in to the Django admin interface by accessing the `/admin` URL.
@@ -50,7 +50,7 @@
 
 - Start the Django development server by running the following command:
 
-`  `python manage.py runserver
+   ` python manage.py runserver `
 
 - By default, the server will run on `http://localhost:8000/` .
 
