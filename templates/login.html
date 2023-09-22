@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingenious</title>
+    <link href="{% static 'assets/img/favicon.png'%}" rel="icon">
+    <!-- css -->
+    <link href="{% static 'assets/css/login.css'%}" rel="stylesheet">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="main.css"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main">
+        <!-- sign up redirection -->
+        <div class="switch" id="switch-cnt">
+            <div class="switch__circle"></div>
+            <div class="switch__circle switch__circle--t"></div>
+            <div class="switch__container" id="switch-c1">
+                
+                <button class="switch__button button switch-btn" ><a href="{% url 'register' %}"> SIGN UP</a></button>
+            </div>
+          </div>
+
+          <!-- main sign in -->
+      <div class="container b-container" id="b-container">
+        <form class="form" id="b-form" method="POST" action="">
+            {% csrf_token %}
+          <h2 class="form_title title">Sign in to Website</h2>
+          <div class="form__icons"><img class="form__icon" src="" alt=""><img class="form__icon" src=""><img class="form__icon" src=""></div><span class="form__span"></span>
+          
+         <!-- for displaying messge that account is created in sign up -->
+          {% for message in messages %}
+            <strong class="{{ message.tags }}">{{message}}</strong>
+            {% endfor %}
+            <br>
+          <input class="form__input" type="text" name="username" placeholder="username">
+          <input class="form__input" type="password" placeholder="Password" name="password">
+          <a class="form__link" href="{% url 'reset_password' %}" style="color: black;">Forgot your password?</a>
+          <button class="form__button button submit">SIGN IN</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+</body>
+</html>

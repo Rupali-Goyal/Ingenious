@@ -1,0 +1,75 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block extrahead %}
+
+<link href="{% static 'assets/css/index.css' %}" rel="stylesheet">
+{% endblock extrahead %}
+{% block content %}
+<div class="container-fluid">
+    <h1><br><br></h1>
+    <header class="section-header">
+        <h3>Answers to the questions from the provided text :)</h3>
+        <p> Our AI based model has been trained on question-answer pairs, including unanswerable questions, for the task of Question Answering.</p>
+      </header>
+    <div class="card border-end box help">
+        <div class="card-body">
+            <form method="post" action="/questions">
+            <div class="row">
+                <div class="col-sm-6">
+                  <div class="card h-100 all">
+                   
+                        {% csrf_token %}
+                    <div class="card-header">
+                            <div >
+                                    <strong>Enter text here</strong>
+                            </div>
+                          
+                    </div>
+                    <div class="card-body">
+                        
+                          
+                            <textarea type="text" id="text" name="text" class="form-control" rows="15" placeholder="Enter text with minimum length of 40 characters" required="required"></textarea>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <button type="reset" class="btn btn-secondary">Clear</button>
+                                </div>
+                                <div class="col-lg-6 text-end">
+                                    <button type="submit" class="btn btn-success ">Compute >></button>
+                                </div>
+                            </div>
+                    </div>
+                
+                  </div>
+                </div>
+                <div class="col-sm-6 ">
+                  <div class="card h-100 all">
+                    <div class="card-header">
+                        <strong>Question Answers</strong>
+                    </div>
+                    <div class="card-body">
+                        <!-- <p>{{variable}}</p> -->
+                        <div class="col ">
+                            <div class="row-lg-6">
+                                <strong>Question</strong><br>
+                                <textarea type="text" id="question" name="question"class="form-control" rows="6" placeholder="Enter Question from the text . e.g. what is your name?" required="required"></textarea>
+                            </div>
+                            <br>
+                            <div class="row-lg-6">
+                                <strong>Answer</strong>
+                                <textarea class="form-control answer border-success text-success" id="exampleFormControlTextarea1" rows="7" placeholder="Answer : My name is Aditi." readonly disabled >{{variable}}</textarea>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+        </div>
+      </div>
+</div>
+
+<br><br>
+    {% endblock %}

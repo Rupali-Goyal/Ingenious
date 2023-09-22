@@ -1,0 +1,251 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="clearfix">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center" data-aos="fade-up">
+        <div class="col-lg-6 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
+          <h2>Ingenious <br>for Your <span>Summaries & Answers!</span></h2>
+          <div style="display: flex;">
+            
+            <form action="/textSummary">
+              <button  class="btn-get-started scrollto btn" type="submit"> Text Summary</button>
+            </form>
+            <form action="/questions" >
+              <button type="submit" class="btn-get-started scrollto btn" style="margin-left: 1em;">Questions Answering</button>
+          </form>
+        
+          </div>
+        </div>
+
+        <div class="col-lg-6 intro-img order-lg-last order-first" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{% static 'assets/img/intro-img.svg'%}" alt="" class="img-fluid">
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+
+          <div class="col-lg-5 col-md-6">
+            <div class="about-img" data-aos="fade-right" data-aos-delay="100">
+              <img src="{% static 'assets/img/about.webp'%}" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-7 col-md-6">
+            <div class="about-content" data-aos="fade-left" data-aos-delay="100">
+              <h2>About Us</h2>
+              <h4>Ingenious Summarization tool will summarized your Text</h4>
+              {% comment %} <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> {% endcomment %}
+              
+                <li><i class="bi bi-check-circle"></i> Your words matter, and our Website is designed to ensure you use the right ones.</li>
+                <li><i class="bi bi-check-circle"></i> Simply enter your text into the input box, and our Website work with you to create the best summary.</li>
+                <li><i class="bi bi-check-circle"></i> Our website will improve your fluency while also ensuring you have the appropriate vocabulary, tone, and style for any occasion</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>Services</h3>
+          <p>Input, Process, Output and get your desired summary.</p>
+        </header>
+
+        <div class="row g-5">
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <div class="icon" style="background: #fceef3;"><i class="bi bi-book" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a href="">Text Summary</a></h4>
+              <p class="description">Ingenious summarizer can condense articles, papers, or documents down to the key points instantly. Our AI uses natural language processing to locate critical information while maintaining the original context.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="box">
+              <div class="icon" style="background: #fff0da;"><i class="bi bi-card-checklist" style="color: #e98e06;"></i></div>
+              <h4 class="title"><a href="">Question-Answer</a></h4>
+              <p class="description">Ingenious give us option to get any answer from input text, documents.Questions are asked directly by the user along passages of arbitrary length that provide precise and concise answers.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <div class="icon" style="background: #dafbff;"><i class="bi bi-justify-left" style="color: #0696e9;"></i></div>
+              <h4 class="title"><a href="">Change length</a></h4>
+              <p class="description">You can get the different lengths of the summary from short to long using the slider provided. This allows you to change the length of the summary while preserving the important information and meaning of the text.</p>
+            </div>
+          </div>
+
+      </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container-fluid" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>Why choose us?</h3>
+          <p>Recognized for innovation, culture, and opportunity</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="why-us-img">
+              <img src="{% static 'assets/img/summary.png'%}" alt="" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="why-us-content">
+              <p>We love hearing about how our writing tool improves lives by improving communication</p>
+              
+
+              <div class="features clearfix" data-aos="fade-up" data-aos-delay="100">
+                <i class="bi bi-bookmarks" style="color: #f058dc;"></i>
+                <h4>Supporting people however they communicate</h4>
+                <p>We develop our writing assistant to support all kinds of people in all kinds of communication—from personal to academic to professional.</p>
+              </div>
+
+              <div class="features clearfix" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-box-seam" style="color: #ffb774;"></i>
+                <h4>Building a determined and dynamic team</h4>
+                <p>Grammarly entrusts team members with autonomy while supporting their professional growth in a collaborative working culture.</p>
+              </div>
+
+              <div class="features clearfix" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-card-checklist" style="color: #589af1;"></i>
+                <h4>Focusing on long-term success</h4>
+                <p>Building on a profitable business model with over $400M in funding, we are growing quickly and excited about our future.</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="container">
+        <div class="row counters" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="350" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Users</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="421" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Summaries</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+            <p>question answers</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Sevice available</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+    
+     <!-- ======= Contact Section ======= -->
+     <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2><span>Contact</span> Us</h2>
+          {% comment %} <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p> {% endcomment %}
+        </div>
+      </div>
+
+      <div class="map">
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3497.873564612293!2d77.49507531489634!3d28.753191682370325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf574d18f2b6f%3A0x4a65c0bc0122eb2f!2sKIET%20Group%20of%20Institutions!5e0!3m2!1sen!2sin!4v1664969445082!5m2!1sen!2sin" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="container mt-5">
+
+        <div class="info-wrap">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 info">
+              <i class="bi bi-geo-alt"></i>
+              <h4>Location:</h4>
+              <p>KIET GROUP OF INSTITUTIONS<br>GHAZIABAD</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+              <i class="bi bi-clock"></i>
+              <h4>Open Hours:</h4>
+              <p>Monday-Sunday:<br>12:00 AM - 23:59 PM</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+              <i class="bi bi-envelope"></i>
+              <h4>Email:</h4>
+              <p>amber.1923csi1060@kiet.edu<br>aditi.1923csi1024@kiet.edu</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+              <i class="bi bi-phone"></i>
+              <h4>Call:</h4>
+              <p>+1 5589 55488 51<br>+1 5589 22475 14</p>
+            </div>
+          </div>
+        </div>
+
+        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+          </div>
+          <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">Send Message</button></div>
+        </form>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+
+
+  </main><!-- End #main -->
+
+ <!-- ======= Footer ======= -->
+ {% endblock %}

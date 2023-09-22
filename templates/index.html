@@ -1,0 +1,99 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block extrahead %}
+
+<link href="{% static 'assets/css/index.css' %}" rel="stylesheet">
+{% endblock extrahead %}
+{% block content %}
+<div class="container-fluid">
+    <h1><br><br></h1>
+    <header class="section-header">
+        <h3>Summarize any text with a click of a button</h3>
+        <p> Our AI uses natural language processing to locate critical information while maintaining the original context.</p>
+      </header>
+    <div class="card border-end box">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-6">
+                  <div class="card h-100 all">
+                    <form method="post" action="/textSummary">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                    <strong>Enter text here</strong>
+                            </div>
+                            <div class="col-sm-6 text-end">
+                                    Max length: <small>short</small>
+                                    <input type="range" min="50" max="1000" name="maxL" id="maxL" value="300"><small>long</small>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="card-body">
+                        
+                            {% csrf_token %}
+                            <textarea type="text" id="text" name="text" class="form-control" rows="10" placeholder="Enter text with minimum length of 40 characters" required="required"></textarea>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <button type="reset" class="btn btn-secondary">Clear</button>
+                                </div>
+                                <div class="col-lg-6 text-end">
+                                    <button type="submit" class="btn btn-success ">Submit</button>
+                                </div>
+                            </div>
+                    </div>
+                </form>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card h-100 all">
+                    <div class="card-header">
+                        <strong>Summary text</strong>
+                    </div>
+                    <div class="card-body">
+                        <p>{{variable}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+</div>
+<!-- ======= Features Section ======= -->
+<section id="features" class="features">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row feature-item">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+          <img src="{% static 'assets/img/paragraph.svg'%}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0" data-aos="fade-left" data-aos-delay="150">
+            
+            <header class="section-header">
+                    <h3>How to use our text summarizer?</h3>
+                </header>
+                <ul>
+                    <p>This is the best feature of this summary tool because it gives you the freedom to choose the length of your summarized text.
+
+                        It depends upon the circumstances, sometimes you want to create a long summary and sometimes a shorter one is enough. This summary generator tool gives you the choice to summarize your text according to your needs.</p>
+                <li>
+                    Insert the text (article, research paper, book extract) into the text area.
+                </li>
+                <li>
+                    Click the <strong>“Summarize”</strong>  Button.
+                </li>
+                <li>
+                    Paragraph mode gives you a unique paragraph summarizing the content. You can also control how long your results are by using the summary length slider.
+                </li>
+                    </ul>
+                    
+              </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Features Section -->
+<br><br>
+    {% endblock %}
